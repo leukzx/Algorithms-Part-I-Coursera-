@@ -7,7 +7,6 @@ import java.util.Arrays;
 public class Board {
     private char[] board;
     private int dim;
-    private LinkedList<Board> neighbors;
 
     // construct a board from an n-by-n array of blocks
     // (where blocks[i][j] = block in row i, column j)
@@ -156,17 +155,5 @@ public class Board {
     }
 
     // unit tests (not graded)
-    public static void main(String[] args) {
-        // create initial board from file
-        In in = new In(args[0]);
-        int n = in.readInt();
-        int[][] blocks = new int[n][n];
-        for (int i = 0; i < n; i++)
-            for (int j = 0; j < n; j++)
-                blocks[i][j] = in.readInt();
-        Board initial = new Board(blocks);
-        StdOut.println(initial.toString());
-        Board twin = initial.twin();
-
-    }
+    public static void main(String[] args) {}
 }

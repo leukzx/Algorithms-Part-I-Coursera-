@@ -12,13 +12,13 @@ public class Solver {
         private int priority;
         private int moves;
         private int manhattan;
-        private int hamming;
+        // private int hamming;
         private SearchNode prev;
 
         public SearchNode(Board newboard, SearchNode prevnode) {
             board = newboard;
             manhattan = board.manhattan();
-            hamming = board.hamming();
+            // hamming = board.hamming();
             if (prevnode != null) moves = prevnode.moves +  1;
             else moves = 0;
             priority = moves + manhattan;
